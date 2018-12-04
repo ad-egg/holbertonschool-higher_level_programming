@@ -14,7 +14,7 @@ int check_cycle(listint_t *list)
 		return (0);
 	walk = list;
 	run = list;
-	while ((walk != NULL) && (run != NULL))
+	while ((walk != NULL) && (run != NULL) && (run->next != NULL))
 	{
 		run = run->next->next;
 		walk = walk->next;
