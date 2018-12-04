@@ -8,16 +8,14 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *walk;
-	listint_t *zoom;
 
 	if (list == NULL)
 		return (0);
-	walk = zoom = list;
-	while ((walk != NULL) && (zoom != NULL))
+	walk = list;
+	while (walk != NULL)
 	{
 		walk = walk->next;
-		zoom = zoom->next->next;
-		if ((walk == list) || (walk == zoom))
+		if (walk == list)
 			return (1);
 	}
 	return (0);
