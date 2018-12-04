@@ -22,3 +22,5 @@ This Python script completes [this source code](https://github.com/holbertonscho
 This Python script prints "The Zen of Python" by Tim Peters followed by a new line.
 ### 10-check_cycle.c
 This C function checks if a singly linked list has a cycle in it and returns 1 if yes and 0 if not. The only functions allowed are: `write`, `printf`, `putchar`, `puts`, `malloc`, and `free`. 
+### 100-write.py
+This Python script prints exactly `and that piece of art is useful - Dora Korpar, 2015-10-15` followed by a newline. This script prints to `stderr` with the function `write` from the `sys` module and exits with the status code `1`.
