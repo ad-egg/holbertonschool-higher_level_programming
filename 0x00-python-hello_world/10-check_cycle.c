@@ -12,13 +12,12 @@ int check_cycle(listint_t *list)
 
 	if (list == NULL)
 		return (0);
-	walk = list;
-	zoom = list;
+	walk = zoom = list;
 	while ((walk != NULL) && (zoom != NULL))
 	{
 		walk = walk->next;
 		zoom = zoom->next->next;
-		if (walk == zoom)
+		if ((walk == list) || (walk == zoom))
 			return (1);
 	}
 	return (0);
