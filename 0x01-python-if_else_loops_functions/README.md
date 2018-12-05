@@ -28,3 +28,5 @@ This function computes `a` to the power of `b` and returns the value.
 This function prints the numbers from 1 to 100 separated by a space. For multiples of three print `Fizz` instead of the number, for multiples of five print `Buzz` instead of the number, for multiples of both print `FizzBuzz` instead of the number.
 ### 13-insert_number.c
 This C function inserts a number into a sorted singly linked list. It returns the address of the new node or `NULL` if it failed.
+### 100-print_tebahpla.py
+This program prints the alphabet in reverse alternating lowercase and uppercase and not followed by a new line.
