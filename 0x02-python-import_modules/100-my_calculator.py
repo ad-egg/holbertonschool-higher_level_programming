@@ -9,6 +9,9 @@ if __name__ == "__main__":
     op = sys.argv[2]
     a = int(sys.argv[1])
     b = int(sys.argv[3])
+    if len(op) > 1:
+        print("Unknown operator. Available operators: +, -, * and /".format())
+        sys.exit(1)
     if op[0] == '+':
         print("{:d} + {:d} = {:d}".format(a, b, calc.add(a, b)))
         sys.exit(0)
