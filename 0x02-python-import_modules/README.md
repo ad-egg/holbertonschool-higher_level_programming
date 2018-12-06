@@ -12,3 +12,5 @@ This program prints the result of the addition of all arguments.
 This program prints all the names defined by the [compiled module](https://github.com/holbertonschool/0x02.py/raw/master/hidden_4.pyc).
 ### 5-variable_load.py
 This program imports the variable `a` from the file `variable_load_5.py` and prints its value.
+### 100-my_calculator.py
+This program imports all functions from the file `calculator_1.py` and handles basic operations.
