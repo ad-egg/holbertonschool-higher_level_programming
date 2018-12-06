@@ -14,3 +14,5 @@ This program prints all the names defined by the [compiled module](https://githu
 This program imports the variable `a` from the file `variable_load_5.py` and prints its value.
 ### 100-my_calculator.py
 This program imports all functions from the file `calculator_1.py` and handles basic operations.
+### 101-easy_print.py
+This program prints `#pythoniscool` in the standard output.
