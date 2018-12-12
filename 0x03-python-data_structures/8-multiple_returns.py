@@ -5,5 +5,5 @@ def multiple_returns(sentence):
         sentence[0] = ""
     else:
         strlength = len(sentence)
-    my_tuple = strlength, sentence[0]
+    my_tuple = (strlength, sentence[0])
     return my_tuple
