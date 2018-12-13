@@ -14,16 +14,16 @@ int is_palindrome(listint_t **head)
 
 	tail = half = *head;
 	if ((head == NULL) || (tail == NULL))
-		return (0);
+		return (1);
 	for (i = 0; tail->next; i++)
 		tail = tail->next;
 	if (i % 2 == 0)
 		k = i / 2;
 	else
 		k = i / 2 + 1;
-	intn = malloc(sizeof(int) * i);
+	intn = malloc(sizeof(int) * k);
 	if (intn == NULL)
-		return (0);
+		return (1);
 	for (j = 0; j < k; j++)
 	{
 		intn[j] = half->n;
