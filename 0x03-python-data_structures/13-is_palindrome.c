@@ -8,33 +8,29 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *tail, *half;
-	int i, j, k;
+	listint_t *current;
+	int i, j;
 	int *intn;
 
-	tail = half = *head;
-	if ((head == NULL) || (tail == NULL))
+	current = *head;
+	if ((head == NULL) || (current == NULL))
 		return (1);
-	for (i = 0; tail->next; i++)
-		tail = tail->next;
-	if (i % 2 == 0)
-		k = i / 2;
-	else
-		k = i / 2 + 1;
-	intn = malloc(sizeof(int) * k);
+	for (i = 1; current->next; i++)
+		current = current->next;
+	intn = malloc(sizeof(int) * i);
 	if (intn == NULL)
 		return (1);
-	for (j = 0; j < k; j++)
+	current = *head;
+	for (j = 0; j < i; j++)
 	{
-		intn[j] = half->n;
-		half = half->next;
+		intn[j] = current->n;
+		current = current->next;
 	}
-	j--;
-	for (; (j > 0) && half; j--)
+	for (j = 0; j < i ; j++)
 	{
-		if (half->n != intn[j])
+		if (intn[i - 1] != intn[j])
 			return (0);
-		half = half->next;
+		i--;
 	}
 	return (1);
 }
