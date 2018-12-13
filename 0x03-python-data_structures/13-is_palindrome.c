@@ -26,11 +26,11 @@ int is_palindrome(listint_t **head)
 		intn[j] = current->n;
 		current = current->next;
 	}
-	for (; j > 0 && current; j--)
+	for (j = 0; j < i ; j++)
 	{
-		if (current->n != intn[j])
+		if (intn[i - 1] != intn[j])
 			return (0);
-		current = current->next;
+		i--;
 	}
 	return (1);
 }
