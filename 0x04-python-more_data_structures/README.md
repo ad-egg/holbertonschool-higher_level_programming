@@ -26,3 +26,5 @@ This function returns a key with the biggest integer value.
 This function returns a list with all values multiplied by a number without using any loops.
 ### 12-roman_to_int.py
 This function converts a Roman numeral to an integer.
+### 101-square_matrix_map.py
+This function computes the square value of all integers of a matrix using `map`.
