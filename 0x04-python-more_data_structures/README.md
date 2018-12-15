@@ -26,6 +26,8 @@ This function returns a key with the biggest integer value.
 This function returns a list with all values multiplied by a number without using any loops.
 ### 12-roman_to_int.py
 This function converts a Roman numeral to an integer.
+### 100-weight_average.py
+This function returns the weighted average of all integers tuple `(<score>, <weight>)`
 ### 101-square_matrix_map.py
 This function computes the square value of all integers of a matrix using `map`.
 ### 102-complex_delete.py
