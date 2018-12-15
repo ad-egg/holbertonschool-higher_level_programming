@@ -28,3 +28,5 @@ This function returns a list with all values multiplied by a number without usin
 This function converts a Roman numeral to an integer.
 ### 101-square_matrix_map.py
 This function computes the square value of all integers of a matrix using `map`.
+### 102-complex_delete.py
+This function deletes keys with a specific value in a dictionary.
