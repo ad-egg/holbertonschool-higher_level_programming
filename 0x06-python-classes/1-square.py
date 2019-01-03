@@ -9,7 +9,7 @@ class Square:
     __size: instantiates Square with size
     """
 
-    def __init__(self, size):
+    def __init__(self, size=0):
         """this function instantiates with size private instance attribute
         """
 
