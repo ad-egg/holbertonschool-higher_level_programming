@@ -14,3 +14,7 @@ This function divides element by element 2 lists.
 This function raises a type exception.
 ### 6-raise_exception_msg.py
 This function raises a name exception with a message.
+### 100-safe_print_integer_err.py
+This function prints an integer.
+### 101-safe_function.py
+This function executes a function safely.
