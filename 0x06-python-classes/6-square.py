@@ -105,6 +105,6 @@ class Square:
             for row in range(0, self.__size):
                 for space in range(0, self.__position[0]):
                     print(" ", end="")
-                for hash in range(0, self.__size):
+                for octothorpe in range(0, self.__size):
                     print("#", end="")
                 print()
