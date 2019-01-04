@@ -57,14 +57,7 @@ class Square:
     def size(self, value):
         """this sets the size I guess
         """
-        if not isinstance(value, int):
-            print("size must be an integer", end="")
-            raise TypeError
-        elif value < 0:
-            print("size must be >= 0", end="")
-            raise ValueError
-        else:
-            self.__size = value
+        self.__size = value
 
     @property
     def position(self):
@@ -76,23 +69,7 @@ class Square:
     def position(self, value):
         """sets the position
         """
-        if type(value) is not tuple:
-            print("position must be a tuple of 2 positive integers", end="")
-            raise TypeError
-        elif len(value) != 2:
-            print("position must be a tuple of 2 positive integers", end="")
-            raise TypeError
-        elif not isinstance(value[0], int):
-            print("position must be a tuple of 2 positive integers", end="")
-            raise TypeError
-        elif not isinstance(value[1], int):
-            print("position must be a tuple of 2 positive integers", end="")
-            raise TypeError
-        elif value[0] < 0 or value[1] < 0:
-            print("position must be a tuple of 2 positive integers", end="")
-            raise TypeError
-        else:
-            self.__position = value
+        self.__position = value
 
     def my_print(self):
         """this function prints the square with the hash character
