@@ -27,13 +27,13 @@ class Square:
             print("position must be a tuple of 2 positive integers", end="")
             raise TypeError
         elif not isinstance(position[0], int):
-            print("position must be a tuple of 2 positive integers", end = "")
+            print("position must be a tuple of 2 positive integers", end="")
             raise TypeError
         elif not isinstance(position[1], int):
-            print("position must be a tuple of 2 positive integers", end = "")
+            print("position must be a tuple of 2 positive integers", end="")
             raise TypeError
         elif position[0] < 0 or position[1] < 0:
-            print("position must be a tuple of 2 positive integers", end = "")
+            print("position must be a tuple of 2 positive integers", end="")
             raise TypeError
         else:
             self.__position = position
