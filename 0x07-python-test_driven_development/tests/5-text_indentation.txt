@@ -31,6 +31,3 @@ Passing something that is not a string
 >>> text_indentation(1024)
 Traceback (most recent call last):
 TypeError: text must be a string
-
-
-
