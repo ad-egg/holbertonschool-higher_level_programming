@@ -3,6 +3,8 @@
 This module contains a function that adds 2 integers.
 If one or both arguments passed are floats, they will be first cast into ints.
 """
+
+
 def add_integer(a, b=98):
     """
     This function returns the sum of arguments a and b.
