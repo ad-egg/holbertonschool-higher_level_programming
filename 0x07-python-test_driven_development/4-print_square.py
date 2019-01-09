@@ -15,7 +15,7 @@ def print_square(size):
         if size < 0:
             raise TypeError("size must be an integer")
         else:
-            int(size)
+            size = int(size)
     if type(size) is int and size < 0:
         raise ValueError("size must be >= 0")
     for row in range(0, size):
