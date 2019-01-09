@@ -13,15 +13,7 @@ class TestMaxInteger(unittest.TestCase):
         """
         tests for empty list
         """
-        nothing = max_integer([])
-        self.assertEqual(nothing, None)
-
-    def two_numbers(self):
-        """
-        tests for passing two numbers
-        """
-        terror = max_integer(1, 2)
-        self.assertRaises(TypeError)
+        self.assertEqual(max_integer([]), None)
 
     def nice_int_list(self):
         """
