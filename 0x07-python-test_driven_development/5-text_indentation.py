@@ -12,7 +12,7 @@ def text_indentation(text):
     """
     if type(text) is not str:
         raise TypeError("text must be a string")
-    text.rstrip(' ')
+    text = text.rstrip(' ')
     i = 0
     while i < len(text) and text[i] == ' ':
         i += 1
