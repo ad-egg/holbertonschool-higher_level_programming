@@ -21,6 +21,8 @@ class TestMaxInteger(unittest.TestCase):
         """
         biggest = max_integer([12, 60, 36])
         self.assertEqual(biggest, 60)
+        with self.assertRaises(TypeError):
+            max_integer(2, 5)
 
     def one_string(self):
         """
