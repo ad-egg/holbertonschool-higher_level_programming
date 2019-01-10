@@ -74,9 +74,6 @@ class Rectangle:
         prints a rectangle using octothorpe character
         """
         string = ""
-        numrows = 0
         if self.width > 0 and self.height > 0:
-            while numrows < self.height:
-                string = "".join('#' * self.width + '\n')
-                numrows += 1
+            string = "".join(('#' * self.width + '\n') * self.height)
         return string
