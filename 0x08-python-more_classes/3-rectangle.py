@@ -74,9 +74,9 @@ class Rectangle:
         prints a rectangle using octothorpe character
         """
         string = ""
-        if self.__width > 0 and self.height > 0:
-            for rows in range(0, self.height):
-                for cars in range(0, self.width):
-                    string = "".join(chr(35))
-                string = "".join("\n")
+        numrows = 0
+        if self.width > 0 and self.height > 0:
+            while numrows < self.height:
+                string = "".join('#' * self.width + '\n')
+                numrows += 1
         return string
