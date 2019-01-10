@@ -119,4 +119,4 @@ class Rectangle:
         """
         returns a new rectangle instance with width == height == size
         """
-        return Rectangle(size, size)        
+        return Rectangle(size, size)
