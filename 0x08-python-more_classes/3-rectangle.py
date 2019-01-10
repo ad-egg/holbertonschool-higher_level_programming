@@ -76,4 +76,5 @@ class Rectangle:
         string = ""
         if self.width > 0 and self.height > 0:
             string = "".join(('#' * self.width + '\n') * self.height)
+            string = string[:-1]
         return string
