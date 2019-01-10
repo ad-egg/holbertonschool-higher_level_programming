@@ -106,9 +106,9 @@ class Rectangle:
         if they have the same area, the first rectangle is returned
         """
         if not isinstance(rect_1, Rectangle):
-            Raise TypeError("rect_1 must be an instance of Rectangle")
+            raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
-            Raise TypeError("rect_2 must be an instance of Rectangle")
+            raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() == rect_2.area() or rect_1.area() > rect_2.area():
             return rect_1
         else:
