@@ -55,5 +55,26 @@ class TestMaxInteger(unittest.TestCase):
         zero = max_integer([0, neg_infin])
         self.assertEqual(zero, 0)
 
+    def test_end_max(self):
+        """
+        max at end
+        """
+        pos_infin = float("inf")
+        self.assertEqual(max_integer([5, 4, pos_infin]), pos_infin)
+
+    def test_mid_max(self):
+        """
+        max in the middle
+        """
+        pos_infin = float("inf")
+        self.assertEqual(max_integer([-2, pos_infin, 9]), pos_infin)
+
+    def test_neg_nums(self):
+        """
+        list of only negative numbers
+        """
+        neg_infin = float("-inf")
+        self.assertEqual(max_integer([-12, -5, neg_infin, -200, -1]), -1)
+
 if __name__ == '__main__':
     unittest.main()
