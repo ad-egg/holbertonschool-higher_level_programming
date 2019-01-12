@@ -76,5 +76,11 @@ class TestMaxInteger(unittest.TestCase):
         neg_infin = float("-inf")
         self.assertEqual(max_integer([-12, -5, neg_infin, -200, -1]), -1)
 
+    def test_one_element(self):
+        """
+        list of only one number
+        """
+        self.assertEqual(max_integer([3.14]), 3.14)
+
 if __name__ == '__main__':
     unittest.main()
