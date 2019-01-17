@@ -12,5 +12,4 @@ class MyList(list):
         """
         this public instance method prints the list but sorted
         """
-        sortedlist = sorted(self)
-        print(sortedlist)
+        print(sorted(self))
