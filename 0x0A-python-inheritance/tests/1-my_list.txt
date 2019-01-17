@@ -60,3 +60,13 @@
 [-500, -2, -1]
 >>> print(neglist)
 [-500, -1, -2]
+
+
+======================================
+= Passing a list of only one integer =
+======================================
+
+>>> shortlist = MyList()
+>>> shortlist.append(-2)
+>>> print(shortlist)
+[-2]
