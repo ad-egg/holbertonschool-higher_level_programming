@@ -13,9 +13,4 @@ class MyList(list):
         this public instance method prints the list but sorted
         """
         sortedlist = sorted(self)
-        print("[", end="")
-        for index in range(len(sortedlist)):
-            print("{:d}".format(sortedlist[index]), end="")
-            if index < len(sortedlist) - 1:
-                print(", ", end="")
-        print("]")
+        print(sortedlist)
