@@ -10,7 +10,9 @@ def read_lines(filename="", nb_lines=0):
     this function reads up to n lines of a text file and prints it to stdout
     """
     with open(filename, 'r', encoding='utf-8') as f:
-        if nb_lines <= 0:
+        numlines = len(f.readlines())
+        f.seek(0)
+        if nb_lines <= 0 or nb_lines >= numlines:
             print(f.read(), end="")
         else:
             for i in range(nb_lines):
