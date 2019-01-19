@@ -24,3 +24,5 @@ This makes the class `Rectangle` implement the `area()` method.
 This is a class `Square` that inherits from `Rectangle` and implements the `area()` method.
 ### 11-square.py
 This is a class `Square` that inherits from `Rectangle` and prints the square description.
+### 100-my_int.py
+This is a class `MyInt` that inherits from `int`. `MyInt` has the `==` and `!=` operators inverted.
