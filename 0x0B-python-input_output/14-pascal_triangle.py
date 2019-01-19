@@ -14,13 +14,9 @@ def pascal_triangle(n):
     for y in range(0, n):
         row = []
         for x in range(0, y + 1):
-            if x == 0:
+            if y == 0 or x == 0 or (y > 0 and x == y):
                 row.append(begin)
             else:
-                if y > 0:
-                    if x < y:
-                        row.append(triangle[y - 1][x] + triangle[y - 1][x - 1])
-                    else:
-                        row.append(begin)
+                row.append(triangle[y - 1][x] + triangle[y - 1][x - 1])
         triangle.append(row)
     return triangle
