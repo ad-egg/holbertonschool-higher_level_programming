@@ -16,13 +16,13 @@ def append_after(filename="", search_string="", new_string=""):
             line = lines[y]
             if len(line) > len_targetstr:  # line may have target str
                 for x in range(len(line) - len_targetstr + 1):
-                    if line[x] == search_string[0]:
+                    if line[x] == search_string[0]:  # matches first letter
                         for i in range(1, len_targetstr):
-                            if line[x + i] != search_string[i]:
+                            if line[x + i] != search_string[i]:  # not a match
                                 break
                             if i == len_targetstr - 1 and line[
-                                 x + i] == search_string[i]:
-                                lines.insert(y + 1, new_string)
-        f.seek(0)
+                                 x + i] == search_string[i]:  # it is a match
+                                lines.insert(y + 1, new_string)  # insert here
+        f.seek(0)  # move cursor back to beginning bc readlines() moved to end
         for line in lines:
             f.write(line)
