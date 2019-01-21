@@ -9,7 +9,7 @@ def append_after(filename="", search_string="", new_string=""):
     """
     inserts new_string after a line that contains search_string
     """
-    with open(filename, 'r+') as f:
+    with open(filename, 'r') as f:
         lines = f.readlines()  # list of all lines
         len_targetstr = len(search_string)
         for y in range(len(lines)):
@@ -26,6 +26,6 @@ def append_after(filename="", search_string="", new_string=""):
                                     lines[y + 1] = new_string + lines[y + 1]
                                 else:
                                     lines.append(new_string)
-        f.seek(0)  # move cursor back to beginning bc readlines() moved to end
+    with open(filename, 'w') as egg:
         for line in lines:
-            f.write(line)
+            egg.write(line)
