@@ -21,8 +21,11 @@ def append_after(filename="", search_string="", new_string=""):
                             if line[x + i] != search_string[i]:  # not a match
                                 break
                             if i == len_targetstr - 1 and line[
-                                 x + i] == search_string[i]:  # it is a match
-                                lines[y + 1] = new_string + lines[y + 1]
+                                 x + i] == search_string[i]:
+                                if y < len(lines) - 1:
+                                    lines[y + 1] = new_string + lines[y + 1]
+                                else:
+                                    lines.append(new_string)
         f.seek(0)  # move cursor back to beginning bc readlines() moved to end
         for line in lines:
             f.write(line)
