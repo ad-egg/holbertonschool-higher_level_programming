@@ -22,7 +22,7 @@ def append_after(filename="", search_string="", new_string=""):
                                 break
                             if i == len_targetstr - 1 and line[
                                  x + i] == search_string[i]:  # it is a match
-                                lines.insert(y + 1, new_string)  # insert here
+                                lines[y + 1] = new_string + lines[y + 1]
         f.seek(0)  # move cursor back to beginning bc readlines() moved to end
         for line in lines:
             f.write(line)
