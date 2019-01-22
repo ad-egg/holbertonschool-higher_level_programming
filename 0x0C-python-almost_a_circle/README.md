@@ -12,6 +12,7 @@ This project is to prepare us for the AirBnB project, which is a big part of the
 - inheritance
 - unittest
 - read/write file
+
 We also learned these new things:
 - `args` and `kwargs`
 - serialization/deserialization
