@@ -15,7 +15,7 @@ class Rectangle(Base):
         """
         instantiates an instance of Rectangle with width, height, and id
         """
-        super().__init__(id)  # call super class with id
+        self._Rectangle__id = super().__init__(id)  # call super class with id
         if type(width) is not int:
             raise TypeError("width must be an integer")
         elif width <= 0:
@@ -129,3 +129,10 @@ class Rectangle(Base):
         """
         for i in range(self.__height):
             print("#" * self.__width)
+
+    def __str__(self):
+        """
+        returns a string that describes the instance of Rectangle
+        """
+        print("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
+              self.__id, self.__x, self.__y, self.__width, self.__height))
