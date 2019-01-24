@@ -29,17 +29,16 @@ class Base:
         """
         returns the JSON string representation of list_dictionaries
         """
-        if list_dictionaries is None or len(list_dictionaries) == 0:
-            return []
-        else:
-            return json.dumps(list_dictionaries)
+        json_str = [d for d in list_dictionaries]
+        return json.dumps(json_str)
 
     @classmethod
     def save_to_file(cls, list_objs):
         """
         writes the JSON string representation of list_objs to a file
         """
-        filename = "{}.json".format(cls.__class__.__name__)
-        json_str = Base.to_json_string(list_objs)
-        with open(filename, 'w', encoding='utf-8') as f:
+        filename = "{}.json".format(cls.__name__)
+        dict_list = [obj.to_dictionary() for obj in list_objs]
+        json_str = Base.to_json_string(dict_list)
+        with open(filename, 'w+', encoding='utf-8') as f:
             f.write(json_str)
