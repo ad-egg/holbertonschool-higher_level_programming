@@ -29,8 +29,7 @@ class Base:
         """
         returns the JSON string representation of list_dictionaries
         """
-        json_str = [d for d in list_dictionaries]
-        return json.dumps(json_str)
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -50,3 +49,12 @@ class Base:
         """
         str_of_things = json.loads(json_string)
         return [dictionary for dictionary in str_of_things]
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        returns an instance with all attributes already set
+        """
+        dummy = cls(6, 6, 6)
+        dummy.update(**dictionary)
+        return dummy
