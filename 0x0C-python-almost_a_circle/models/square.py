@@ -62,13 +62,13 @@ class Square(Rectangle):
             self.y = args[3]
         if args is None or len(args) == 0:
             for key, value in kwargs.items():
-                if key is "id":
+                if key == "id":
                     self.id = value
-                elif key is "size":
+                elif key == "size":
                     self.size = value
-                elif key is "x":
+                elif key == "x":
                     self.x = value
-                elif key is "y":
+                elif key == "y":
                     self.y = value
 
     def to_dictionary(self):

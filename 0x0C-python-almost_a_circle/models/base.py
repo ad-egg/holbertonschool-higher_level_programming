@@ -67,8 +67,7 @@ class Base:
         filename = "{}.json".format(cls.__name__)
         list_instances = []
         with open(filename) as f:
-            json_string = f.read()
-        list_dict = Base.from_json_string(json_string)
+            list_dict = Base.from_json_string(f.read())
         for shape in list_dict:
             dummy = cls.create(**shape)
             list_instances.append(dummy)
