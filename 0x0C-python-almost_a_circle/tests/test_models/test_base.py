@@ -23,7 +23,7 @@ class TestClassBase(unittest.TestCase):
         """
         pi_base = Base(3.14)
         self.assertEqual(pi_base.id, 3.14)
-        
+
     def test_create_instance_no_id(self):
         """
         tests for id of an instance that did not receive an id
