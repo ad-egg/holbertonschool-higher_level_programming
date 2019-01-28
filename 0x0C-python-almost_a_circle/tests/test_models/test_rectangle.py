@@ -4,9 +4,10 @@ Unittest for models/rectangle.py
 """
 import unittest
 from models.rectangle import Rectangle
+from models.base import Base
 
 
-class TestClassBase(unittest.TestCase):
+class TestClassRectangle(unittest.TestCase):
     """
     test the class Rectangle
     """
@@ -147,6 +148,31 @@ class TestClassBase(unittest.TestCase):
         test public method that returns area of instance
         """
         self.assertEqual(self.quad.area(), 36)
+
+    def test_display(self):
+        """
+        tests public method that prints in stdout the instance using '#' does
+        not return anything
+        """
+        self.assertIsNone(self.quad.display())
+
+    def test_subclass_of_base(self):
+        """
+        tests that Rectangle is a subclass of Base
+        """
+        self.assertIsInstance(self.quad, Base)
+
+    def test_override_str(self):
+        """
+        tests that the overloading __str__ method returns correct string
+        """
+        self.assertEqual(self.quad.__str__(), "[Rectangle] (6) 6/6 - 6/6")
+
+    def test_to_dictionary(self):
+        """
+        tests the public method to make sure it returns a dictionary
+        """
+        self.assertTrue(type(self.quad.to_dictionary()) is dict)
 
 if __name__ == '__main__':
     unittest.main()

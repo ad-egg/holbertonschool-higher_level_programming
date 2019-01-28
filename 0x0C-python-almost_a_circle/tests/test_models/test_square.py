@@ -4,9 +4,11 @@ Unittest for models/square.py
 """
 import unittest
 from models.square import Square
+from models.rectangle import Rectangle
+from models.base import Base
 
 
-class TestClassBase(unittest.TestCase):
+class TestClassSquare(unittest.TestCase):
     """
     test the class Square
     """
@@ -126,6 +128,31 @@ class TestClassBase(unittest.TestCase):
         test public method that returns area of instance
         """
         self.assertEqual(self.equad.area(), 36)
+
+    def test_display(self):
+        """
+        tests public method that prints in stdout the instance using '#' does
+        not return anything
+        """
+        self.assertIsNone(self.equad.display())
+
+    def test_subclass_of_base(self):
+        """
+        tests that Square is a subclass of Rectangle
+        """
+        self.assertTrue(issubclass(Square, Rectangle))
+
+    def test_override_str(self):
+        """
+        tests that the overloading __str__ method returns correct string
+        """
+        self.assertEqual(self.equad.__str__(), "[Square] (6) 6/6 - 6")
+
+    def test_to_dictionary(self):
+        """
+        tests the public method to make sure it returns a dictionary
+        """
+        self.assertTrue(type(self.equad.to_dictionary()) is dict)
 
 if __name__ == '__main__':
     unittest.main()
