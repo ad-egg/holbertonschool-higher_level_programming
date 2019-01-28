@@ -154,5 +154,13 @@ class TestClassSquare(unittest.TestCase):
         """
         self.assertTrue(type(self.equad.to_dictionary()) is dict)
 
+    def test_create(self):
+        """
+        tests the Base class method create
+        """
+        instance_dict = self.equad.to_dictionary()
+        square_dupe = Square.create(**instance_dict)
+        self.assertTrue(type(square_dupe) is Square)
+
 if __name__ == '__main__':
     unittest.main()

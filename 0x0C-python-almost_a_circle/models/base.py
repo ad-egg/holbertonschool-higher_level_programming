@@ -36,8 +36,10 @@ class Base:
         """
         writes the JSON string representation of list_objs to a file
         """
+        dict_list = []
         filename = "{}.json".format(cls.__name__)
-        dict_list = [obj.to_dictionary() for obj in list_objs]
+        for obj in list_objs:
+            dict_list.append(obj.to_dictionary())
         json_str = Base.to_json_string(dict_list)
         with open(filename, 'w+', encoding='utf-8') as f:
             f.write(json_str)

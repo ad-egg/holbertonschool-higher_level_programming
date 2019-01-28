@@ -182,18 +182,5 @@ class TestClassRectangle(unittest.TestCase):
         rectangle_dupe = Rectangle.create(**instance_dict)
         self.assertIsInstance(rectangle_dupe, Rectangle)
 
-    def test_json_stuff(self):
-        """
-        tests the methods that involve JSON
-        """
-        instance_dict = self.quad.to_dictionary()
-        list_dict = []
-        list_dict.append(instance_dict)
-        Base.save_to_file(list_dict)
-        list_instances = Base.load_from_file()
-        self.assertTrue(type(list_instances) is list)
-        for instance in list_instances:
-            self.assertTrue(type(instance) is Rectangle)
-
 if __name__ == '__main__':
     unittest.main()
