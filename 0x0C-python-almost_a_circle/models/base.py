@@ -78,9 +78,12 @@ class Base:
         """
         filename = "{}.json".format(cls.__name__)
         list_instances = []
-        with open(filename) as f:
-            list_dict = Base.from_json_string(f.read())
-        for shape in list_dict:
-            dummy = cls.create(**shape)
-            list_instances.append(dummy)
-        return list_instances
+        try:
+            with open(filename) as f:
+                list_dict = Base.from_json_string(f.read())
+            for shape in list_dict:
+                dummy = cls.create(**shape)
+                list_instances.append(dummy)
+            return list_instances
+        except FileNotFoundError:
+            return []
