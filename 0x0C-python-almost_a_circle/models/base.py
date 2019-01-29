@@ -64,10 +64,7 @@ class Base:
         """
         returns an instance with all attributes already set
         """
-        if cls == "Rectangle":
-            dummy = Rectangle(6, 6, 6)
-        elif cls == "Square":
-            dummy = Square(6, 6)
+        dummy = cls(6, 6, 6)
         dummy.update(**dictionary)
         return dummy
 
