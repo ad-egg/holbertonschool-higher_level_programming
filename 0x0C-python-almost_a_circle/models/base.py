@@ -53,8 +53,11 @@ class Base:
         """
         returns the list of the JSON string representation
         """
-        str_of_things = json.loads(json_string)
-        return [dictionary for dictionary in str_of_things]
+        if json_string is None:
+            return []
+        else:
+            str_of_things = json.loads(json_string)
+            return [dictionary for dictionary in str_of_things]
 
     @classmethod
     def create(cls, **dictionary):
