@@ -8,4 +8,5 @@ WHERE title NOT IN (
 		INNER JOIN tv_genres ON tv_show_genres.genre_id=tv_genres.id
 		WHERE name='Comedy'
 )
+GROUP BY title
 ORDER BY title ASC;
