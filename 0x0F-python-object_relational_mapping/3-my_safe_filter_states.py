@@ -14,8 +14,7 @@ if __name__ == "__main__":
             host="localhost", port=3306, user=argv[1],
             passwd=argv[2], db=argv[3])
     cur = db.cursor()
-    sql_query = "SELECT * FROM states WHERE name = ':s' ORDER BY states.id ASC"
-    cur.execute(sql_query, (argv[4],))
+    cur.execute("SELECT * FROM states WHERE name=%s ORDER BY states.id ASC", (name,))
     rows = cur.fetchall()
     db.close()
     for row in rows:
