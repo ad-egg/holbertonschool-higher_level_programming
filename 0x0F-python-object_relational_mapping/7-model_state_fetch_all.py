@@ -2,7 +2,7 @@
 """lists all State objects from the database hbtn_0e_6_usa"""
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     from model_state import Base, State
     from sqlalchemy import (create_engine)
     from sqlalchemy.orm import Session
@@ -11,7 +11,9 @@ if __name__=='__main__':
     user = argv[1]
     passw = argv[2]
     db_name = argv[3]
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(user, passw, db_name), pool_pre_ping=True)
+    engine = create_engine(
+            'mysql+mysqldb://{}:{}@localhost/{}'.format(user, passw, db_name),
+            pool_pre_ping=True)
 
     Base.metadata.create_all(engine)
 
