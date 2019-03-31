@@ -19,7 +19,8 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    joined = session.query(City, State).filter(City.state_id == State.id).order_by(City.id.asc()).all()
+    joined = session.query(City, State).filter(
+            City.state_id == State.id).order_by(City.id.asc()).all()
     session.close()
 
     for cities, states in joined:
