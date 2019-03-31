@@ -10,6 +10,7 @@ from sqlalchemy.orm import relationship
 
 Base = declarative_base()
 
+
 class City(Base):
     """a class that inherits from Base"""
     __tablename__ = "cities"
