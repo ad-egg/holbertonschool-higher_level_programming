@@ -17,9 +17,8 @@ def find_peak(list_of_integers):
         return list_of_integers[-1]
     # peak is not at either end
     else:
-        list_len = len(list_of_integers)
-        middle = list_len // 2
+        middle = len(list_of_integers) // 2
         if list_of_integers[middle] <= list_of_integers[middle + 1]:
-            return find_peak(list_of_integers[middle + 1:list_len])
+            return find_peak(list_of_integers[middle + 1:])
         else:
-            return find_peak(list_of_integers[0:middle - 1])
+            return find_peak(list_of_integers[:middle - 1])
