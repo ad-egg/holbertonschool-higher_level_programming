@@ -8,6 +8,6 @@ import urllib.request
 
 req = urllib.request.Request(sys.argv[1])
 
-with urllib.request.urlopen(req) as response:
+with urllib.request.urlopen(sys.argv[1]) as response:
     meta_info = dict(response.info())
     print(meta_info.get('X-Request-Id'))
