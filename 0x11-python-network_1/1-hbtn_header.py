@@ -9,5 +9,5 @@ from sys import argv
 req = urllib.request.Request(argv[1])
 
 with urllib.request.urlopen(req) as response:
-    headers = dict(response.info())
-    print(headers.get('X-Request-Id'))
+    meta_info = dict(response.info())
+    print(meta_info.get('X-Request-Id'))
