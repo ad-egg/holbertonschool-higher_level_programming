@@ -12,5 +12,5 @@ if __name__ == '__main__':
     passw = argv[2]
 
     r = requests.get('https://api.github.comi/user', auth=(usern, passw))
-    
-    print()
+    user_dict = r.json()
+    print(user_dict['id'])
