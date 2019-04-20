@@ -11,7 +11,7 @@ if __name__ == '__main__':
     usern = argv[1]
     passw = argv[2]
 
-    r = requests.get('https://api.github.comi/user', auth=(usern, passw))
+    r = requests.get('https://api.github.com/user', auth=(usern, passw))
     if r.status_code == 200:
         user_dict = r.json()
         print(user_dict['id'])
