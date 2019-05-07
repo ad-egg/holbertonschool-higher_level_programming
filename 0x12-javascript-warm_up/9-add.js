@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// prints the addition of 2 integers
+// defines a function which adds 2 integers and script prints the sum
 
 function add (a, b) { return a + b; }
 
