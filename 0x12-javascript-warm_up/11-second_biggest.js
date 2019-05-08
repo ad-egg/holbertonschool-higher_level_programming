@@ -4,6 +4,6 @@ let args = process.argv.slice(2);
 if (args.length <= 1) {
   console.log('0');
 } else {
-  let sortedValues = args.sort();
+  let sortedValues = new Set(args.sort());
   console.log(sortedValues[sortedValues.length - 2]);
 }
