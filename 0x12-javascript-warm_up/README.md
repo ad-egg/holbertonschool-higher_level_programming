@@ -28,3 +28,38 @@ This script prints the second biggest integer in a list of arguments.
 This script replaces a value.
 ### 13-add.js
 This script returns the addition of 2 integers.
+### 100-let_me_const.js
+This script modifies the value of `myVar` to `333`.
+```
+$ cat 100-main.js
+#!/usr/bin/node
+myVar = 89;
+require('./100-let_me_const')
+console.log(myVar);
+$ ./100-let_me_const.js
+333
+```
+### 101-call_me_moby.js
+This function executes x times a function.
+### 102-add_me_maybe.js
+This function increments and calls a function.
+### 103-object_fct.js
+This file is updated by adding a new function `incr` that increments the integer `value`.
+```
+$ cat 103-object_fct.js
+#!/usr/bin/node
+let myObject = {
+  type: 'object',
+  value: 12
+};
+console.log(myObject);
+/*
+YOUR CODE HERE
+*/
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
+```
