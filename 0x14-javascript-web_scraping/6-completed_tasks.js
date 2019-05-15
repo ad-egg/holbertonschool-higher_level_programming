@@ -9,7 +9,7 @@ req(url, function (error, response, body) {
   } else {
     let tasks = JSON.parse(body);
     let answer = {};
-    for (let task in tasks) {
+    for (let task of tasks) {
       if (task.completed === true) {
         if (answer[task.userId] == null) {
           answer[task.userId] = 1;
@@ -18,5 +18,6 @@ req(url, function (error, response, body) {
         }
       }
     }
+    console.log(answer);
   }
 });
